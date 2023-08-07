@@ -1,9 +1,8 @@
-<h2>Try Two</h2>
-
 <h2>Try Three</h2>
 <button type="button" (click)="add()">Add</button>
 <br />
 <div *ngFor="let item of items; let i = index">
+  Input {{ i + 1 }}
 <input #elem type="number"
 [value]="item.value" (change)="onChange(i, elem)"/>
 <button type="button" (click)="delete(i)">Delete</button>

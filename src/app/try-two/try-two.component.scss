@@ -1,0 +1,8 @@
+input[type=number], .cl-number {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: var(--app-font-monospace);
+  font-size: inherit;
+  cursor: pointer;
+}

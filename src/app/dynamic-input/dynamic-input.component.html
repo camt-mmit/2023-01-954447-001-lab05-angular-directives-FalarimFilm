@@ -1,0 +1,13 @@
+<button type="button" (click)="add()">Input</button>
+<br />
+<div *ngFor="let item of items; let i = index">
+  Number {{ i + 1 }}
+  <input
+    #elem
+    type="number"
+    [value]="item.value"
+    (change)="onChange(i, elem)"
+  />
+  <button type="button" (click)="delete(i)">Delete</button>
+</div>
+<output>Result {{ getResult() }}</output>

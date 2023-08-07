@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class TwoWaysComponent {
   @Input() message = '';
-
   @Output() messageChange = new EventEmitter<string>();
 
   private updateMessage(): void {

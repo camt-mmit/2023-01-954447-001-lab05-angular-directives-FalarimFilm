@@ -1,0 +1,18 @@
+input[type=number], .cl-number {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: var(--app-font-monospace);
+  font-size: inherit;
+  cursor: pointer;
+}
+
+button, .cl-action {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1ch;
+  box-sizing: border-box;
+  padding: .5em;
+  font-weight: 700;
+}

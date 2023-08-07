@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<body>
+  <div class="section-cointainer">
+    <button type="button" (click)="addSection()">
+      <span class="material-symbols-outlined">add_circle</span>Section
+    </button>
+  </div>
+  <div class="app-cmp-section-container-border">
+    <div class="input-cointainer">
+      <div *ngFor="let section of sections; let sectionIndex = index">
+        <div>
+          <div class="cmp-section-title">
+            <button type="button" (click)="addItem(sectionIndex)">
+              <span class="material-symbols-outlined">add_circle</span>Input
+            </button>
+            <div class="cmp-section-title-list">
+              <h3>Section {{ sectionIndex + 1 }}</h3>
+            </div>
+            <button
+              type="button"
+              class="cl-warn"
+              [disabled]="sections.length <= 1"
+              [ngClass]="{ 'disabled-button': sections.length <= 1 }"
+              (click)="delete(sectionIndex)"
+            >
+              <span class="material-symbols-outlined">delete</span>
+            </button>
+          </div>
+          <div class="cmp-inputs-list">
+            <div *ngFor="let item of section.items; let itemIndex = index">
+              <label>
+                <b class="app-cmp-input-title">
+                  Number {{ itemIndex + 1 }}<span class="app-cmp-input-no"></span>
+                </b>
+                <input
+                  #elem
+                  class="app-cmp-input app-cl-number"
+                  type="number"
+                  [value]="item.value"
+                  (change)="onChange(sectionIndex, itemIndex, elem)"
+                />
+              </label>
+              <button
+                type="button"
+                class="cl-warn"
+                [disabled]="section.items.length <= 1"
+                [ngClass]="{ 'disabled-button': section.items.length <= 1 }"
+                (click)="deleteItem(sectionIndex, itemIndex)"
+              >
+                <span class="material-symbols-outlined">delete</span>
+              </button>
+            </div>
+            <div class="app-cmp-input-container">
+              <label>
+                <b class="app-cmp-input-title">Result</b>
+                <output class="app-cmp-result">{{ getResult(sectionIndex) }}</output>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

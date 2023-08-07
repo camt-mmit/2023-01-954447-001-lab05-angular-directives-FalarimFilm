@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TwoWaysComponent } from './two-ways/two-ways.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TwoWaysComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    TwoWaysComponent,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

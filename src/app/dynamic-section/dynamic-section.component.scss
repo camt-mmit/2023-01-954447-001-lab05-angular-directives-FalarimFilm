@@ -1,0 +1,132 @@
+button, .cl-action {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1ch;
+  box-sizing: border-box;
+  padding: .5em;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1ch;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+}
+
+.section-cointainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-cointainer{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 1em 1em 0;
+}
+
+.app-cmp-input-title::after {
+  content: "::";
+
+  color: var(--app-primary-coler);
+
+  font-weight: bold;
+
+  margin-left: auto;
+
+  margin-right: 1ch;
+}
+
+input[type=number], .cl-number {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: var(--app-font-monospace);
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.app-cmp-input-no {
+  display: inline-flex;
+
+  flex-direction: row;
+
+  width: 3ch;
+
+  margin-inline: 1ch;
+}
+
+.app-cmp-input,
+.app-cmp-result {
+  flex: 1 0 auto;
+}
+
+.app-cmp-input-title {
+  display: inline-flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  width: 19.9ch;
+}
+
+.app-cmp-result {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2ch;
+  height: 42px;
+  text-decoration: underline solid currentColor 3px;
+}
+
+.cmp-section-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1ch;
+    padding: 1em 0;
+    position: sticky;
+    border-bottom: 1px solid #000000;
+    justify-content: space-between;
+}
+
+.cmp-section-title-list{
+  flex: 1 0 auto;
+}
+
+.app-cmp-section-container-border {
+  border: 1px solid #000000 ;
+  border-radius: 3ch;
+  margin: 1% 10%;
+  padding: 1ch;
+}
+
+.disabled-button {
+
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.app-cmp-input{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+
+
+
+
+
+

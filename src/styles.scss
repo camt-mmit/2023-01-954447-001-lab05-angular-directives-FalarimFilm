@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --app-icon-fill: 0;
+  --app-font: sans-serif;
+  --app-font-size: 16px;
+  --app-font-monospace: monospace;
+  --app-primary-color: #0000ff;
+  --app-warn-color: #ff0000;
+  font-family: var(--app-font);
+  font-size: var(--app-font-size);
+}
+
+body{
+  display: block;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
